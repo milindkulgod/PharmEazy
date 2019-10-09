@@ -18,12 +18,16 @@ For the application, Flask was used.
 1.Install flask in your local environment.
 
 2.Set the FLASK_APP environment variable to app.py and run command **flask run** </b> 
+
 or </b>
+
 Directly run the app.py file by the command **python app.py**
 
 3.Open **localhost:5000** in the web browser to see and interact with the app.
 </pre>
 </body>
+
+
 
 **Data Preprocessing:**
 
