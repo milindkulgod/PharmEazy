@@ -5,6 +5,25 @@
 The dataset used for this has been taken from [Kaggle](https://www.kaggle.com/jessicali9530/kuc-hackathon-winter-2018/home).
 This dataset consists of patient reviews for numerous drugs that have been prescribed for the symptoms that they have experienced, and how effective they have been.
 
+The code was coded initially on Jupyter Notebook to have a stepwise visual response of the code flow.
+The code was finalized on Notepad++.
+
+Any other text editor will do just fine as long as they support the Python libraries that are being used.
+
+For the application, Flask was used.
+
+**Steps to run the flask app locally**
+<body>
+<pre>
+1.Install flask in your local environment.
+
+2.Set the FLASK_APP environment variable to app.py and run command **flask run** </b> 
+or </b>
+Directly run the app.py file by the command **python app.py**
+
+3.Open **localhost:5000** in the web browser to see and interact with the app.
+</pre>
+</body>
 
 **Data Preprocessing:**
 
