@@ -50,7 +50,7 @@ Next, we use the nltk library, which is probably one of the most useful librarie
 In order to make sure the search engine covers all the words that are present in the dataset, we have to create a word bank, which contains all the unique words that are present. The data structure that can be used for this is a python dictionary. This makes use of hash indexing, which is quick.
 
 For each review, i.e document, we have to create a posting list, and this is possible by calculating the TF-IDF of the document.
-(Term Frequency - Inverse Document Frequency.
+(Term Frequency - Inverse Document Frequency).
 
 **Query Analysis and Processing:**
 
