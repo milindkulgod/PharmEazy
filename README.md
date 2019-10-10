@@ -27,7 +27,21 @@ Directly run the app.py file by the command **python app.py**
 </pre>
 </body>
 
+To host the website, ngrok.exe was used.
 
+To use ngrok:
+
+<body>
+ <pre>
+ 1. Download the application from www.ngrok.com
+ 
+ 2. Install the .exe file in your local folder and launch the application.
+ 
+ 3. A command prompt is opened. Type **ngrok http 5000** as 5000 is the port number.
+ 
+ 4. The local folder has been hosted, and the web app can be accessed through the url generated on running the .exe file.
+ </pre>
+ </body>
 
 **Data Preprocessing:**
 
