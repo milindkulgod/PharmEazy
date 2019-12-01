@@ -72,3 +72,33 @@ For each review, i.e document, we have to create a posting list, and this is pos
 We take an input from the user through a web application and process the query by calculating the word weight. On doing so, we retrieve the top k results that are required. The cosine similarity is calculated.
 
  If a review is not there in the first k elements, we will utilize weight in the kth element as the upper-bound on weight in the vector. thus finding the upper-bound score.
+ 
+ ## Naive Bayes Classifier
+ 
+ The task of classification is the process of predicting a class when a set of data points have been given. This classifier uses a training data to understand how the variables that are given as input, relate to a certain class. In this project, since we are carrying out classification on the basis of text, the Naive Bayes Classifier is the most appropriate classifier for the sccenario. Text classification plays a major role in Natural Language Processing as language does not exactly have a fixed schema and there is continuous learning taking place. The Naive Bayes Classifier is a classifier that is probabilistic. It is based on the Bayes Theorem, where an assumption is made, that the attributes are conditionally independent. The classification is carried out by calculating the probability of each given class, and displaying the classes with the highest probabilities as the output.
+ 
+ In order to carry out the evaluation, the data can be divided into training data, testing data and validation data. In the given dataset, there are two .csv files that are separated as training and testing data. The validation dataset can be created by extracting it from the bigger training dataset in order to carry out the validation tests. Here, we will be displaying the accuracy of the classifier.
+
+First, we need to calculate the prior probabilities, and this is done by creating a dictionary which contains the list of all documents, unique words and total number of words occuring in each class. Next, we create another dictionary within, for every class, in which words are keys, and store the frequency value of the word appearing and the number of reviews the word occured in the entire class. There is just one problem though, suppose if, the conditional probability turns out to be zero, that is, when the word in the query is absent in the vocabulary, then the entire probability becomes zero, that is, which isn't really helpful in terms of classification. Hence, we use something called the Laplace smoothing, which is used to regularize Naive Bayes. It is denoted as Alpha(the hyperparameter), done by adding 1 to the numerator, which helps in overcoming this problem. 
+
+**Evaluation and Hyperparameter Tuning**
+
+The Laplace smoothing is the hyperparameter. In case of hyperparameter tuning, the approach around the default was to change the value of the hyperparameter. Observations show that by decreasing the value of the hyperparameter, the accuracy increased.
+
+## Imaage Caption Search
+
+mage captioning works in the realms of Deep Learining. It is the process of generating a textual description of a given image. Deep Learning functions on two major fundamentals, Natural Language Processing and Computer Vision. This model undergoes two phases, namely training and testing. The training phase is where the image captioning model is trained with a set of images, and a testing set of images is used to test the trained model. The image will be linked to the corresponding output captions.
+
+The image captioning model uses an attention-based model, which allows us to see the focus area of the image as the caption is generated. This is where Tensorflow's Keras and eager execution comes into picture. The dataset used for the image captioning model is the MS-COCO Dataset, which is a dataset of images easily accessible by everyone.
+
+After the dataset is downloaded, a subset of the images are selected to train the model. For the preprocessing of images, Inception for classification.
+
+Captions are tokenized to create a vocabulary of all unique words and create a word-index mapping.
+
+The model is then trained. The model architecture is inspired by the Show, Attend and Tell paper.
+
+After training the images, testing images were given as input in order to generate captions for freshly given images as input.
+
+Most of the image captioning was done by the captioning model that was available on the tensorflow github repository, the next task was to use the captions generated as input for a search engine and display images containing the keywords in the caption.
+
+After training the model, a csv file was opened, and, with the help of a for loop, the testing part of the model was made to run for the number of iterations that were equal to the number of images that were being tested. The caption, along with the url of the image were recorded in a .csv file and the captions were tokenized, bringing it into a suitable format to run it through the search engine, following the same procedure of calculating the TF-IDF scores and displaying the top-k results along with the image.
