@@ -43,6 +43,7 @@ To use ngrok:
  </pre>
  </body>
 
+There is a fault with ngrok but, although it allows you to create a tunnel from the localhost to the server, data access becomes really slow over the time, which is unlikely with other hosting services like PythonAnywhere. The reason why ngrok was selected was that my dataset file size is big, thus exceeding the free upload linit in hosting services.
 **Data Preprocessing:**
 
 
